@@ -9,16 +9,19 @@ class Page {
     private $tpl;
     private $options = [];
     private $defaults = [
+        "header"=> true,
+        "footer"=> true,
         "data"=>[]
     ];
 
     public function __construct($opts = array())
     {
-        $this->options = array_merge($opts = array());
+        $this->options = array_merge($this->defaults, $opts);
 
         $config = array(
-            "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"."/views/"],
-            "cache_dir"     => $_SERVER["DOCUMENT_ROOT"."/views-cache/"],
+            "base_url"      => null,
+            "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"].DIRECTORY_SEPARATOR."views/",
+            "cache_dir"     => $_SERVER["DOCUMENT_ROOT"].DIRECTORY_SEPARATOR."views-cache/",
             "debug"         => false
            );
 
@@ -26,10 +29,15 @@ class Page {
 
     $this->tpl = new Tpl;
 
-    $this->setData(($this->options["data"]));
-          
-    $this->tpl->draw("headers");
+    if ($this->options['data']) $this->setData($this->options['data']);
 
+	if ($this->options['header'] === true) $this->tpl->draw("header", false);
+
+    }
+
+    public function __destruct()
+    {
+        if ($this->options['footer'] === true) $this->tpl->draw("footer", false);
     }
 
     public function setData($data = array())
@@ -39,16 +47,9 @@ class Page {
     }}   
 
 
-    public function setTpl($name, $data = array(), $returnHTML = false)
+    public function setTpl($tplName, $data = array(), $returnHTML = false)
     {
         $this->setData($data);
-        return $this->tpl->draw($name, $returnHTML);
+        return $this->tpl->draw($tplName, $returnHTML);
     }
-
-    
-    public function __destruct()
-    {
-        $this->tpl->draw("footer");
-    }
-
 }
