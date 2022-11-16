@@ -1,8 +1,19 @@
 <?php
 
-require_once "vendor/autoload.php";
+require_once "src/Common/Includes.php";
+require_once "vendor/slim/slim/Slim/Slim.php";
 
-use Common\Environment;
+use \Slim\Slim;
+use \Controller\Page;
 
-Environment::load(__DIR__);
+$app = new Slim();
 
+$app->config('debug', true);
+
+$app->get('/', function () {
+    $page = new Page();
+    $page->setTpl('index');
+});
+
+
+$app->run();
