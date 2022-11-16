@@ -1,13 +1,8 @@
 <?php
 
-require "vendor/autoload.php";
+require_once "vendor/autoload.php";
 
-use acita\src\Common\Environment;
-use acita\src\DB\Sql;
+use Common\Environment;
 
-// Environment::load(__DIR__);
+Environment::load(__DIR__);
 
-// $env = getenv();
-// print_r($env);
-
-$sql = new Sql();

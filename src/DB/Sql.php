@@ -1,12 +1,8 @@
 <?php 
 
-namespace acita\src\DB;
+namespace DB;
 
 class Sql {
-
-	/**
-	 * Classe responsável por instanciar conexões no banco de dados
-	 */
 
 	private $conn;
 
@@ -18,6 +14,7 @@ class Sql {
 			getenv("DB_USER"),
 			getenv("DB_PASSWORD")
 		);
+
 
 	}
 

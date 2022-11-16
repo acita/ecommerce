@@ -1,6 +1,6 @@
 <?php
 
-namespace acita\src\Common;
+namespace Common;
 
 class Environment{
 
