@@ -2,8 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8"> 
-        <title>Acita Ecommerce</title>
+        <title>Ecommerce Vendas S/A</title>
     </head>
     <body>
-
-    
+            
