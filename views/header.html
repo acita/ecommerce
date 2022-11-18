@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hcode Store</title>
+    <title>Ecommerce Store</title>
     
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -20,7 +20,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/res/css/owl.carousel.css">
     <link rel="stylesheet" href="/res/css/style.css">
-    <link rel="stylesheet" href="/res/responsive.css">
+    <link rel="stylesheet" href="/res/css/responsive.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -49,7 +49,10 @@
                     <div class="header-right">
                         <ul class="list-unstyled list-inline">
                             <li class="dropdown dropdown-small">
-                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">moeda :</span><span class="value">BRL </span><b class="caret"></b></a>
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" 
+                                href="#"><span class="key">moeda :</span><span class="value">BRL </span>
+                                <b class="caret"></b>
+                                </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">BRL</a></li>
                                     <li><a href="#">USD</a></li>
@@ -57,7 +60,10 @@
                             </li>
 
                             <li class="dropdown dropdown-small">
-                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">linguagem :</span><span class="value">Português </span><b class="caret"></b></a>
+                                <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" 
+                                href="#"><span class="key">linguagem :</span><span class="value">Português </span>
+                                <b class="caret"></b>
+                                </a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Português</a></li>
                                     <li><a href="#">Inglês</a></li>
@@ -82,7 +88,9 @@
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="/res/carrinho.html">Carrinho - <span class="cart-amunt">R$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="/res/carrinho.html">Carrinho - <span class="cart-amunt">R$100</span> 
+                            <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span>
+                        </a>
                     </div>
                 </div>
             </div>

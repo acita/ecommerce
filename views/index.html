@@ -88,8 +88,8 @@
                         <div class="product-f-image">
                             <img src="res/img/product-1.jpg" alt="">
                             <div class="product-hover">
-                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Carrinho</a>
+                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> Detalhes</a>
                             </div>
                         </div>
                         
@@ -103,8 +103,8 @@
                         <div class="product-f-image">
                             <img src="res/img/product-2.jpg" alt="">
                             <div class="product-hover">
-                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Carrinho</a>
+                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> Detalhes</a>
                             </div>
                         </div>
                         
@@ -117,8 +117,8 @@
                         <div class="product-f-image">
                             <img src="res/img/product-3.jpg" alt="">
                             <div class="product-hover">
-                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Carrinho</a>
+                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> Detalhes</a>
                             </div>
                         </div>
                         
@@ -132,8 +132,8 @@
                         <div class="product-f-image">
                             <img src="res/img/product-4.jpg" alt="">
                             <div class="product-hover">
-                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Carrinho</a>
+                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> Detalhes</a>
                             </div>
                         </div>
                         
@@ -147,8 +147,8 @@
                         <div class="product-f-image">
                             <img src="res/img/product-5.jpg" alt="">
                             <div class="product-hover">
-                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Carrinho</a>
+                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> Detalhes</a>
                             </div>
                         </div>
                         
@@ -162,8 +162,8 @@
                         <div class="product-f-image">
                             <img src="res/img/product-6.jpg" alt="">
                             <div class="product-hover">
-                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                <a href="#" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Carrinho</a>
+                                <a href="#" class="view-details-link"><i class="fa fa-link"></i> Detalhes</a>
                             </div>
                         </div>
                         
