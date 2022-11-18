@@ -1,8 +1,8 @@
 <?php 
 
-namespace DB;
+namespace Model;
 
-class Sql {
+class ConnectSQL {
 
 	private $conn;
 

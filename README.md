@@ -1,10 +1,10 @@
 ## DESCRIÇÃO
 
-Projeto de e-commerce básico em PHP
+Projeto de e-commerce básico em PHP utilizando a arquitetura MVC  
 
 ## REQUISITOS
 
-PHP 7.0 or later
-PHP Mailer: "5.2.22
-Slim Framework: 2.0
-RainTpl: 3.0.0
+PHP 7.0 or later  
+PHP Mailer: "5.2.22  
+Slim Framework: 2.0  
+RainTpl: 3.0.0  

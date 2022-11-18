@@ -20,7 +20,7 @@ class IndexController {
 
         $config = array(
             "base_url"      => null,
-            "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"].DIRECTORY_SEPARATOR."/src/views/",
+            "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"].DIRECTORY_SEPARATOR."/src/View/",
             "cache_dir"     => $_SERVER["DOCUMENT_ROOT"].DIRECTORY_SEPARATOR."views-cache/",
             "debug"         => false
            );
