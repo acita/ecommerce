@@ -4,7 +4,7 @@ namespace Controller;
 
 use Rain\Tpl;
 
-class Page {
+class IndexController {
 
     private $tpl;
     private $options = [];
@@ -20,7 +20,7 @@ class Page {
 
         $config = array(
             "base_url"      => null,
-            "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"].DIRECTORY_SEPARATOR."views/",
+            "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"].DIRECTORY_SEPARATOR."/src/views/",
             "cache_dir"     => $_SERVER["DOCUMENT_ROOT"].DIRECTORY_SEPARATOR."views-cache/",
             "debug"         => false
            );

@@ -3,15 +3,15 @@
 require_once "src/Common/Includes.php";
 require_once "vendor/slim/slim/Slim/Slim.php";
 
+use Controller\IndexController;
 use \Slim\Slim;
-use \Controller\Page;
 
 $app = new Slim();
 
 $app->config('debug', true);
 
 $app->get('/', function () {
-    $page = new Page();
+    $page = new IndexController();
     $page->setTpl('index');
 });
 
