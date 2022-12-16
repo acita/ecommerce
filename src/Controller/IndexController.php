@@ -1,6 +1,6 @@
 <?php
 
-namespace Controller;
+namespace controller;
 
 use Rain\Tpl;
 
@@ -14,16 +14,19 @@ class IndexController {
         "data"=>[]
     ];
 
-    public function __construct($opts = array())
+    public function __construct($opts = array(), $tpl_dir = "src/View/")
     {
         $this->options = array_merge($this->defaults, $opts);
 
         $config = array(
             "base_url"      => null,
-            "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"].DIRECTORY_SEPARATOR."/src/View/",
+            "tpl_dir"       => $_SERVER["DOCUMENT_ROOT"].DIRECTORY_SEPARATOR.$tpl_dir,
             "cache_dir"     => $_SERVER["DOCUMENT_ROOT"].DIRECTORY_SEPARATOR."views-cache/",
             "debug"         => false
            );
+
+        // var_dump($config);
+        // die();
 
     Tpl::configure( $config );
 
