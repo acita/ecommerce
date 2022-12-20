@@ -24,10 +24,7 @@ class IndexController {
             "cache_dir"     => $_SERVER["DOCUMENT_ROOT"].DIRECTORY_SEPARATOR."views-cache/",
             "debug"         => false
            );
-
-        // var_dump($config);
-        // die();
-
+    
     Tpl::configure( $config );
 
     $this->tpl = new Tpl;

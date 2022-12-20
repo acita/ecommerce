@@ -1,7 +1,5 @@
 <?php
 
-namespace Common;
-
 class Environment{
 
     /**
@@ -19,7 +17,8 @@ class Environment{
         foreach ($lines as $line){
             putenv(trim($line));
         }
-
+    
     }
 
 }
+

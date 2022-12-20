@@ -1,15 +1,16 @@
 <?php
 
-require_once "src/Common/Includes.php";
+require_once "vendor/autoload.php";
+require_once "src/Common/Environment.php";
 require_once "vendor/slim/slim/Slim/Slim.php";
 
 use Controller\AdminController;
 use Controller\IndexController;
-use \Slim\Slim;
+use Slim\Slim;
+use Model\User;
 
 $app = new Slim();
-
-// $app->config('debug', true);
+Environment::load(__DIR__);
 
 $app->get('/', function () {
     $page = new IndexController();
@@ -19,6 +20,20 @@ $app->get('/', function () {
 $app->get('/admin', function () {
     $page = new AdminController();
     $page->setTpl('index');
+});
+
+$app->get('/login', function () {
+    $page = new AdminController([
+        "header"=>false,
+        "footer"=>false
+    ]);
+    $page->setTpl('login');
+});
+
+$app->post('/login', function () {
+    User::login($_POST["login"], $_POST["password"]);
+    header("Location: /admin");
+    exit;
 });
 
 $app->run();
