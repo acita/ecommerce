@@ -7,6 +7,8 @@ use Model\Model;
 
 class User extends Model {
 
+    const SESSAO = "User";
+
     public static function login ($login, $password)
     {
         $sql = new ConnectSQL();
@@ -25,12 +27,37 @@ class User extends Model {
         if(password_verify($password, $data["despassword"]) === true)
         {
             $user = new User();
-            $user->setiduser($data["iduser"]);
+            $user->setData($data);
+                      
+            $_SESSION[User::SESSAO] = $user->getValues();
+
+            return $user;
 
         }else
         {
             throw new \Exception("Usuário inexistente ou senha inválida");
         }
+    }
+
+    public static function verifyLogin($inadmin = true)
+    {
+        if(!isset($_SESSION[User::SESSAO])
+        ||
+        !$_SESSION[User::SESSAO]
+        ||
+        !(int)$_SESSION[User::SESSAO]["iduser"] > 0
+        ||
+        (bool)$_SESSION[User::SESSAO]["inadmin"] !== $inadmin
+        )
+        {
+            header("Location: /login");
+            exit;
+        }
+    }
+
+    public static function logout()
+    {
+        $_SESSION[User::SESSAO] = NULL;
     }
 
 }

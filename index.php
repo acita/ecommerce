@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once "vendor/autoload.php";
 require_once "src/Common/Environment.php";
 require_once "vendor/slim/slim/Slim/Slim.php";
@@ -20,6 +22,7 @@ $app->get('/', function () {
 $app->get('/admin', function () {
     $page = new AdminController();
     $page->setTpl('index');
+    User::verifyLogin();
 });
 
 $app->get('/login', function () {
@@ -35,6 +38,13 @@ $app->post('/login', function () {
     header("Location: /admin");
     exit;
 });
+
+$app->get('/logout', function () {
+    User::logout();
+    header("Location: /login");
+    exit;
+});
+
 
 $app->run();
 
