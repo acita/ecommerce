@@ -20,9 +20,10 @@ $app->get('/', function () {
 });
 
 $app->get('/admin', function () {
+    User::verifyLogin();
     $page = new AdminController();
     $page->setTpl('index');
-    User::verifyLogin();
+
 });
 
 $app->get('/login', function () {
@@ -45,6 +46,37 @@ $app->get('/logout', function () {
     exit;
 });
 
+$app->get('/admin/create', function () {
+    User::verifyLogin();
+    $page = new AdminController();
+    $page->setTpl('users-create');
+    exit;
+});
+
+$app->get('/admin/update', function () {
+    User::verifyLogin();
+    $page = new AdminController();
+    $page->setTpl('users-update');
+    exit;
+});
+
+$app->get('/admin/users', function () {
+    User::verifyLogin();
+    $page = new AdminController();
+    $page->setTpl('users');
+    exit;
+});
+
+$app->post('/admin/create', function () {
+    User::verifyLogin();
+    header("Location: /login");
+    exit;
+});
+
+$app->post('/admin/update', function () {
+    exit;
+    header('Location: /users');
+});
 
 $app->run();
 

@@ -11,6 +11,9 @@ class User extends Model {
 
     public static function login ($login, $password)
     {
+        if($login != "" && $password != "" ||
+            $login != NULL && $password != NULL)
+        {
         $sql = new ConnectSQL();
 
         $results = $sql->select("SELECT *FROM tb_users WHERE deslogin = :LOGIN", array(
@@ -37,7 +40,7 @@ class User extends Model {
         {
             throw new \Exception("Usuário inexistente ou senha inválida");
         }
-    }
+    }}
 
     public static function verifyLogin($inadmin = true)
     {
@@ -59,5 +62,4 @@ class User extends Model {
     {
         $_SESSION[User::SESSAO] = NULL;
     }
-
 }
