@@ -2,7 +2,7 @@
 
 namespace Controller;
 
-class AdminController extends IndexController {
+class AdminController extends PageController {
 
     public function __construct($opts = array(), $tpl_dir = "src/View/admin/")
     {

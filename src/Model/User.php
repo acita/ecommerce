@@ -42,6 +42,10 @@ class User extends Model {
         }
     }}
 
+    /**
+     * Verifica se o usuário está autenticado
+     * @param bool $inadmin 
+     */
     public static function verifyLogin($inadmin = true)
     {
         if(!isset($_SESSION[User::SESSAO])

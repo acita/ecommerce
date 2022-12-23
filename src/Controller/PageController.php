@@ -1,10 +1,10 @@
 <?php
 
-namespace controller;
+namespace Controller;
 
 use Rain\Tpl;
 
-class IndexController {
+class PageController {
 
     private $tpl;
     private $options = [];

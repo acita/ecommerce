@@ -7,7 +7,7 @@ require_once "src/Common/Environment.php";
 require_once "vendor/slim/slim/Slim/Slim.php";
 
 use Controller\AdminController;
-use Controller\IndexController;
+use Controller\PageController;
 use Slim\Slim;
 use Model\User;
 
@@ -15,7 +15,7 @@ $app = new Slim();
 Environment::load(__DIR__);
 
 $app->get('/', function () {
-    $page = new IndexController();
+    $page = new PageController();
     $page->setTpl('index');
 });
 
@@ -74,6 +74,7 @@ $app->post('/admin/create', function () {
 });
 
 $app->post('/admin/update', function () {
+    User::verifyLogin();
     exit;
     header('Location: /users');
 });
