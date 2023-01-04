@@ -66,4 +66,15 @@ class User extends Model {
     {
         $_SESSION[User::SESSAO] = NULL;
     }
+
+    public static function listAll()
+    {
+        $sql = new ConnectSQL();
+        return $sql->select("SELECT * FROM tb_users a INNER JOIN tb_persons b USING(idperson) ORDER BY b.desperson");
+    }
+
+    public static function saveData()
+    {
+        
+    }
 }

@@ -6,10 +6,10 @@ require_once "vendor/autoload.php";
 require_once "src/Common/Environment.php";
 require_once "vendor/slim/slim/Slim/Slim.php";
 
-use Controller\AdminController;
-use Controller\PageController;
 use Slim\Slim;
+use Controller\PageController;
 use Model\User;
+use Controller\AdminController;
 
 $app = new Slim();
 Environment::load(__DIR__);
@@ -46,14 +46,20 @@ $app->get('/logout', function () {
     exit;
 });
 
-$app->get('/admin/create', function () {
+$app->get('/admin/users/create', function () {
     User::verifyLogin();
     $page = new AdminController();
     $page->setTpl('users-create');
     exit;
 });
 
-$app->get('/admin/update', function () {
+$app->get('/admin/users/:iduser/delete', function ($iduser) {
+    User::verifyLogin();
+    exit;
+    header('Location: /users');
+});
+
+$app->get('/admin/users/:iduser', function ($iduser) {
     User::verifyLogin();
     $page = new AdminController();
     $page->setTpl('users-update');
@@ -62,22 +68,23 @@ $app->get('/admin/update', function () {
 
 $app->get('/admin/users', function () {
     User::verifyLogin();
+    $users = User::listAll();
     $page = new AdminController();
-    $page->setTpl('users');
+    $page->setTpl('users', array(
+        "users"=>$users
+    ));
     exit;
 });
 
-$app->post('/admin/create', function () {
+$app->post('/admin/users/create', function () {
     User::verifyLogin();
-    header("Location: /login");
     exit;
 });
 
-$app->post('/admin/update', function () {
+$app->post('/admin/update/:iduser', function ($iduser) {
     User::verifyLogin();
     exit;
     header('Location: /users');
 });
 
 $app->run();
-
