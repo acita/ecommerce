@@ -118,6 +118,7 @@ $app->get('/admin/forgot', function(){
 
 $app->post('/admin/forgot', function(){
     $_POST["email"];
+    $user = User::getForgot($_POST["email"]);
 });
 
 $app->run();
