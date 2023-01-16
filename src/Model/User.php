@@ -39,8 +39,10 @@ class User extends Model {
 
         }else
         {
-            throw new \Exception("Usuário inexistente ou senha inválida");
+            $message = throw new \Exception("Usuário inexistente ou senha inválida");
+            echo $message->getMessage();
         }
+
     }}
 
     /**
@@ -65,7 +67,7 @@ class User extends Model {
 
     public static function logout()
     {
-        $_SESSION[User::SESSAO] = NULL;
+        session_destroy();
     }
 
     public static function listAll()

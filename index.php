@@ -100,13 +100,24 @@ $app->post('/admin/users/create', function () {
 
 $app->post('/admin/user/update/:iduser', function ($iduser) {
     User::verifyLogin();
-
     $user = new User();
     $user->get((int)$iduser);
     $user->setData($_POST);
     $user->update();
     header('Location: /admin/users');
     exit;
+});
+
+$app->get('/admin/forgot', function(){
+    $page = new AdminController([
+        "header"=>false,
+        "footer"=>false
+    ]);
+    $page->setTpl('forgot');
+});
+
+$app->post('/admin/forgot', function(){
+    $_POST["email"];
 });
 
 $app->run();
